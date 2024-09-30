@@ -35,9 +35,24 @@ public class Ball : MonoBehaviour
         rb.velocity = new Vector2(xDirection * ballSpeed, Random.Range(-1f, 1f) * ballSpeed);//Random.Range can also be a y.Direction
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        //Check if the tag is = Paddle then print a text
+        if (other.gameObject.CompareTag("Paddle"))
+        {
+
+            Debug.Log("Paddle Hit");
+        }
+        //Check if the tag is = Wall then print a text
+        else if (other.gameObject.CompareTag("Wall"))
+        {
+            Debug.Log("Wall Hit");
+        }
     }
 }
