@@ -55,4 +55,12 @@ public class Ball : MonoBehaviour
             Debug.Log("Wall Hit");
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Score"))
+        {
+            Debug.Log("Player Scored");
+        }
+    }
 }

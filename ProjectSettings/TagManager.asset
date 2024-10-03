@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Paddle
   - Wall
+  - Score
   layers:
   - Default
   - TransparentFX
